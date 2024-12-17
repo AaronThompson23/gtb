@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", system-ui;
+}
+body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */ 
+        margin: 0; /* Remove default margin */
+        background-color: #EFF3FF;
+        overflow-x: hidden; 
+        overflow-y: auto;
+    
+        
+}
+a {
+    text-decoration: none;
+}
+header {
+    height: 62px;
+    width: 1280px;
+    background-color: #EFF3FF;
+    display: flex;
+    flex-direction: row;
+    gap: 408px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo {
+    width: 181px;
+    height: 42px;
+
+}
+header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 52px;
+}
+nav a {
+    font-size: 14px;
+    margin-block-start: 6px;
+    color: #000000;
+    font-weight: 600;
+}
+.index-main {
+    height: 492px;
+    width: 1280px;
+    background-image: url(../img/main.png);
+    background-repeat: no-repeat;
+}
+.index-main aside {
+    position: absolute;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-inline-start: 127px;
+    margin-block-start: 150px;
+    
+}
+aside button {
+    margin-block-start: 38px;
+}
+.services {
+    height: 450px;
+    width: 1280px;
+    background-color: #EFF3FF;
+}
+.services h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 30px;
+}
+.services-cp {
+    display: flex;
+    flex-direction: row;
+    gap: 66px;
+    margin-inline-start: 101px;
+    margin-block-start: 74px;
+}
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 500px;
+   width: 1280px;
+   background-color: #8AA2FA;
+  
+}
+.abt-ctn p {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.abt-ctn .p1 {
+    width: 343px;
+    height: 125px;
+    text-align: justify;
+    line-height: 25px;
+}
+.abt-ctn .p2 {
+    width: 343px;
+    height: 200px;
+    line-height: 25px;
+    margin-block-start: 13px;
+    text-align: justify;
+}
+
+.building {
+    height: 380px;
+    width: 300px;
+    background-image: url(../img/frame11.png);
+}
+
+.abt-ctn h4 {
+    text-align: center;
+    margin-block-end: 24px;
+}
+.about-elm {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 206px;
+    width: 1280px;
+    background-color: #EFF3FF;
+}
+.contact-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-logo {
+    align-items: center;
+}
+.ct-nav {
+    margin-block-start: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 52px;
+    align-self: center;
+
+}
+footer {
+    height: 71px;
+    width: 1280px;
+    background-color: #7160FF;
+    display: flex;
+    color: #EFF3FF;
+    font-size: 16px;
+    font-weight: 400;
+}
+footer p {
+    display: inline;
+}
+.privacy {
+    margin-block-start: 24px;
+}
+.index-privacy {
+    margin-inline-start: 250px; 
+    margin-block-start: 23px;
+}
+.login-main {
+    height: 381px;
+    padding-top: 30px;
+}
+.login-main h2 {
+    text-align: center;
+    color: #7160FF;
+    font-size: 24px;
+    font-weight: 700;
+}
+.login-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.login-main button {
+    width: 340px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #7160FF;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+form a {
+    color: #7160FF;
+    font-size: 16px;
+    font-weight: 400;
+}
+.password-container {
+    position: relative;
+   
+}
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #000;
+}
+
+/* smaller screen  */
+/* smaller screen start */
+@media only screen and (max-width: 430px) {
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", system-ui;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */ 
+        margin: 0; /* Remove default margin */
+        background-color: #EFF3FF;
+        
+}
+    a {
+        text-decoration: none;
+    }
+    header {
+        height: 44px;
+        background-color: #EFF3FF;
+        display: flex;
+        flex-direction: row;
+        gap: 180px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-logo {
+        width: 90px;
+        height: 30px;
+    
+    }
+    header nav {
+        display: flex;
+        flex-direction: row;
+    }
+    .header-nav a {
+        display: none;
+        font-size: 14px;
+        margin-block-start: 6px;
+        color: #000000;
+        font-weight: 600;
+    }
+    .index-main {
+        height: 284px;
+        width: 100%;
+        background-image: url(../img/sm-sm.png);
+        background-repeat: no-repeat;
+        background-size: cover; /* This makes the image cover the full width */
+        background-position: center; 
+    }
+    .index-main aside {
+        position: absolute;
+        font-size: 16px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin-inline-start: 33px;
+        margin-block-start: 78px;
+        
+    }
+    aside button {
+        margin-block-start: 28px;
+    }
+    .services {
+        display: flex;
+        flex-direction: column;
+        height: 1143px;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        background-color: #EFF3FF;
+    }
+    .services h3 {
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 0 !important;
+    }
+    .services-cp {
+        display: flex;
+        flex-direction: column;
+        gap: 51px;
+        margin-inline-start: 0 !important;
+        margin-block-start: 40px !important;
+
+    }
+    
+    
+    .about {
+       height: 418px;
+       width: 100%;
+       display: flex;
+    justify-content: center;
+    align-items: center;
+      
+    }
+    .abt-ctn p {
+        font-size: 12px;
+        line-height: 25px;
+    }
+    
+    .abt-ctn .p1 {
+        width: 293px;
+        height: 125px;
+        text-align: justify;
+        line-height: 25px;
+    }
+    .abt-ctn .p2 {
+        width: 293px;
+        height: 175px;
+        line-height: 25px;
+        margin-block-start: 20px;
+        text-align: justify;
+    }
+    
+    .building {
+        display: none;
+    }
+    
+    .abt-ctn h4 {
+        text-align: center;
+        margin-block-end: 16px;
+    }
+    .about-elm {
+        position: absolute;
+        gap: 50px;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 255px;
+        width: 100%;
+        background-color: #EFF3FF;
+    }
+    .contact-logo {
+        margin: 0 !important;
+        height: 30px;
+        align-items: center;
+    }
+    .contact-div {
+        margin-block-start: 25px;
+        justify-self: center;
+        display: flex;
+        flex-direction: row;
+        gap: 59px;
+    }
+    .ct-nav {
+        margin-inline-start: 0 !important;
+        margin-block-start: 0 !important;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    footer {
+        height: 46px;
+        width: 100%;
+        background-color: #7160FF;
+        display: flex;
+        color: #EFF3FF;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .nodisplay {
+        display: none;
+    }
+    .index-privacy {
+        font-size: 12px;
+        margin-block-start: 11px;
+    }
+    footer p {
+        display: inline;
+    }
+    .privacy {
+        margin-block-start: 24px;
+    }
+    .login-main {
+        display: flex;
+        flex-direction: column;
+        height: 517px;
+        width: 393px;
+        background-color: #FEFEFE;
+        padding-top: 0 !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .login-main h2 {
+        /* text-align: center; */
+        color: #7160FF;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+        align-items: center;
+    }
+    
+    form button {
+        width: 340px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: #7160FF;
+        border: none;
+        outline: none;
+    }
+    form a {
+        color: #7160FF;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .password-container {
+        position: relative;
+       
+    }
+    .eye-icon {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        color: #000;
+    }
+    
+}

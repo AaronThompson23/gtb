@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - GTB</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+    <link rel="stylesheet" href="style/component.css">
+    <link rel="stylesheet" href="style/dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="navigator">
+                <header class="head">
+                    <img src="img/logo.png" alt="">
+                    <section class="user-wrapper">
+                       <p class="username">Aaron Thompson</p>
+                    </section>
+                </header>
+                <section class="nav-1">
+                    <section class="lk-dash">
+                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                        <a href="dashboard.html">Dashboard</a>
+                    </section>
+                    <section class="lk-dash">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        <a href="transfer.html">Transfer</a>
+                    </section>
+                    <section class="lk-dashactive">
+                        <i class="fa fa-file-text" aria-hidden="true"></i>
+                        <a href="history.html">Transactions</a>
+                    </section>
+                    <section class="lk-dash">
+                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                        <a href="#" class="open-overlay">Payments</a>
+                    </section>
+                    <section class="lk-dash">
+                        <i class="fa-solid fa-wallet"></i>
+                        <a href="#" class="open-overlay">My Wallet</a>
+                    </section>
+                    <section class="lk-dash">
+                        <i class="fa fa-exchange" aria-hidden="true"></i>
+                        <a href="#" class="open-overlay">Exchange</a>
+                    </section>
+                    <div class="divider"></div>
+                    <section class="lk-dash">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        <a href="#">Settings</a>
+                    </section>
+                    <section class="lk-dash">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <a href="" onclick="logout()" >Log Out</a>
+                    </section>
+                </section>
+                <footer class="dashboard-footer">
+                    
+                    Privacy and Policy
+                </footer>
+        </aside>
+        <img src="img/upgrade.png" alt="" class="upgrade-overlay">
+        <main>
+            <section class="otp-modal">
+                <h2>Transaction Code</h2>
+                <span id="inc-code" style="color: rgb(239, 90, 90); font-size: 12px; display:none">Incorrect Code</span>
+                   <div class="otp-row">
+                    
+                    <input type="text" class="otp" maxlength="1" pattern="[0-9]" id="otp1">
+                    <input type="text" class="otp" maxlength="1" pattern="[0-9]" id="otp2">
+                    <input type="text" class="otp" maxlength="1" pattern="[0-9]" id="otp3">
+                    <input type="text" class="otp" maxlength="1" pattern="[0-9]" id="otp4">
+                   </div>
+               </section> 
+            <header class="mini-header">
+                <img src="img/logo.png" alt="" class="header-logo"> 
+                <section class="menu">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </section>
+                <nav class="header-nav">
+                 <a href="#">Home</a>
+                 <a href="#">Services</a>
+                 <a href="#">About Us</a>
+                 <a href="#">Contact Us</a>
+                 <button class="btn btn-sm">
+                     Login
+                 </button>
+                
+                </nav>
+                
+             </header>
+
+            <header class="main-header">
+                <div class="main-header-left">
+                    <h2>Dashboard</h2>
+                </div>
+                
+            </header>
+            <section class="main-section-left">
+            
+                <div class="main-header-left">
+                    <h2>Account</h2>
+                </div>
+                <section class="card-slider">
+                    <div class="card">
+                        <label for="">Main Balance</label>
+                        <label for="" style="color: #000000;font-weight: 700;letter-spacing: 2px;font-size: 20px;"><i class="fa fa-usd" aria-hidden="true"></i> <span class="acct">15,230,354.12</span></label>
+                        <section class="saving">
+                            <label for="">Savings:</label>
+                            <label for="" style="color: #000000;font-weight: 500;">1263152260</label>
+                            <span id="toggle" class="eye-icon toggleAccount">
+                                <i class="fa-regular fa-eye" onclick="hideAccount()"></i>
+                            </span>
+                        </section>
+
+
+                    </div>
+                    
+                    <div class="upgrade-div">
+                        <img src="img/upgrade.png" alt="">
+                    </div>
+                    <div class="quick-tf">
+                        <label for="">Quick Transfer</label>
+                        <input type="text" name="" id="" class="inp inp-mid" placeholder="Account Number">
+                        <input type="text" name="" id="amount" class="inp inp-mid" placeholder="Amount">
+                        <button class="btn inp-mid">Transfer</button>
+                    </div>
+                </section>
+                <div class="quick-action">
+                    <section id="tf-link" onclick="transferLink()">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        <span> Transfer</span>
+                    </section>
+                    <section id="tr-link" onclick="transactferLink()">
+                        <i class="fa fa-file-text" aria-hidden="true"></i>
+                        <span>Transactions</span>
+                    </section>
+                    <section class="open-overlay">
+                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                        <span>Payments</span>
+                    </section>
+                    <section class="open-overlay">
+                        <i class="fa-solid fa-wallet"></i>
+                        <span>My Wallet</span>
+                    </section>
+
+
+                </div>
+                <section class="label">
+                    <label for="">Transactions</label> <label for="">Details</label>
+                </section>
+                <div class="history-exchange" style="display:flex; justify-content: center;align-items: center;">
+                    <div class="tf-history" style="display: flex;flex-direction: column;">
+                        <section class="transaction-history">
+                            <div class="row row-1">
+                                <label for="" class="cl-1">CitiBank USA</label> <label for="" class="cl-2" style="color: #028F02;"><i class="fa fa-usd" aria-hidden="true"></i> 4,123.00</label>
+                            </div>
+                            <div class="row row-2">
+                                <label for="" class="cl-1"><i class="fa fa-long-arrow-right" aria-hidden="true" style="color: #028F02;"></i> Transfer</label> <label for="" class="cl-2">23 Sept</label>
+                            </div>                        
+                        </section>
+                        <section class="transaction-history">
+                            <div class="row row-1">
+                                <label for="" class="cl-1">Chase</label> <label for="" class="cl-2" style="color: #028F02;"><i class="fa fa-usd" aria-hidden="true"></i> 2,100.00</label>
+                            </div>
+                            <div class="row row-2">
+                                <label for="" class="cl-1"><i class="fa fa-long-arrow-right" aria-hidden="true" style="color: #028F02;"></i> Transfer</label> <label for="" class="cl-2">11 Sept</label>
+                            </div>                        
+                        </section>
+                        <section class="transaction-history">
+                            <div class="row row-1">
+                                <label for="" class="cl-1">Chase</label> <label for="" class="cl-2" style="color: #028F02;"><i class="fa fa-usd" aria-hidden="true"></i> 123.00</label>
+                            </div>
+                            <div class="row row-2">
+                                <label for="" class="cl-1"><i class="fa fa-long-arrow-right" aria-hidden="true" style="color: #028F02;"></i> Transfer</label> <label for="" class="cl-2">12 Augt </label>
+                            </div>                        
+                        </section>
+
+                    </div>
+                    
+                    
+                    <canvas id="exchangeRateChart" class="exchange"></canvas>
+                </div>
+            </section>
+
+                   
+            <footer class="main-footer">
+                <section class="social-media">
+                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                 <i class="fa fa-instagram" aria-hidden="true"></i>
+                 <i class="fa fa-twitter" aria-hidden="true"></i>
+                </section>
+     
+                 <p style=" margin-inline-start: 544px;margin-block-start: 23px;" class="nodisplay">All rights reserved.</p>
+                 <section class="index-privacy">
+                     <p>Privacy and Policy</p> <span class="nodisplay">|</span><p class="nodisplay">Terms of Services</p>
+                 </section>
+             </footer>
+        </main>
+    </div>
+
+    <script>
+        var menu = document.querySelector(".menu");
+        var navElement = document.querySelector(".navigator");
+
+// Toggle visibility with transition when .menu is clicked
+menu.addEventListener("click", function(event) {
+event.preventDefault();
+
+if (navElement.classList.contains("active")) {
+    navElement.classList.remove("active");
+    // Wait for the transition to end before setting display to "none"
+    setTimeout(() => {
+        navElement.style.display = "none";
+    }, 300); // Match this timeout with the CSS transition duration
+} else {
+    navElement.style.display = "flex";
+    setTimeout(() => {
+        navElement.classList.add("active");
+    }, 10); // Small delay to trigger transition effect
+}
+});
+
+// Close the .navigator when clicking outside
+document.addEventListener("click", function(event) {
+if (window.matchMedia("(max-width: 393px)").matches) {
+    if (!navElement.contains(event.target) && !menu.contains(event.target)) {
+        navElement.classList.remove("active");
+        setTimeout(() => {
+            navElement.style.display = "none";
+        }, 300);
+    }
+}
+});
+
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputs = document.querySelectorAll('.otp');
+        const errorCode = document.getElementById('inc-code');
+    
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', function() {
+                // Allow only numbers
+                this.value = this.value.replace(/[^0-9]/g, '');
+    
+                // Move to the next input if a number is entered
+                if (this.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+    
+                // If on the last input and all values are filled, check the code
+                if (index === inputs.length - 1 && this.value.length === 1) {
+                    const otpValue = Array.from(inputs).map(input => input.value).join('');
+                    if (otpValue === '4576') {
+                        window.location.href = 'your-page-url.html'; // Change this to your destination page
+                    } else {
+                        errorCode.style.display = 'flex'; // Show error message
+                    }
+                }
+            });
+    
+            // Automatically focus on the previous input if backspace is pressed
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace' && this.value === '' && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+        });
+    });
+    </script>
+    <script>
+        const amountInput = document.getElementById('amount');
+            const errorMessage = document.getElementById('error-message');
+    
+            // Event listener for input change
+            amountInput.addEventListener('input', () => {
+                // Remove the error message initially
+                errorMessage.style.display = 'none';
+    
+                // Get the current value of the input
+                let value = amountInput.value;
+    
+                // Remove commas for validation
+                let unformattedValue = value.replace(/,/g, '');
+    
+                // Check if the value is a valid number
+                if (isNaN(unformattedValue) || /[^0-9.]/.test(unformattedValue)) {
+                    // Display the error message
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+            });
+    
+            // Event listener for input blur to format number
+            amountInput.addEventListener('blur', () => {
+                let value = amountInput.value;
+    
+                // Remove commas for validation and formatting
+                let unformattedValue = value.replace(/,/g, '');
+    
+                // Check if the value is a valid number
+                if (isNaN(unformattedValue) || unformattedValue === '') {
+                    // Display the error message
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+    
+                // Format the input value when user stops typing (on blur)
+                amountInput.value = formatAmount(unformattedValue);
+            });
+    
+            // Function to format number with commas and two decimal places
+            function formatAmount(value) {
+                // Convert the value to a float
+                const floatValue = parseFloat(value);
+                if (isNaN(floatValue)) {
+                    return '';
+                }
+                // Format with commas and two decimal places
+                return floatValue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            }
+    
+    </script>
+</body>
+</html>
+<script>
+    // Check if the user is logged in
+    if (localStorage.getItem('isLoggedIn') !== 'true') {
+        // Redirect to login page if not logged in
+        window.location.href = 'login.html';
+    }
+</script>
+
+<script src="https://kit.fontawesome.com/c1dabd0246.js" crossorigin="anonymous"></script>
+<script src="js/upgrade.js"></script>
+<script src="js/exchange.js"></script>
+<script src="js/link.js"></script>
+<script src="js/logout.js"></script>
