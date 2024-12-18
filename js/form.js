@@ -7,7 +7,7 @@ document.getElementById('loginLink').addEventListener('click', function(event) {
     const password = passwordInput.value;
 
     // Example criteria (Replace with actual logic)
-    if (email === 'authoritiesaviation@gmail.com' && password === 'Ayomide23!') {
+    if (email === 'thompsonaaron789@gmail.com' && password === 'Thompson89$') {
         emailInput.style.border = '';
         passwordInput.style.border = '';
 
